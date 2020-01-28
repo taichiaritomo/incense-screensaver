@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #incense-screensaver {
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: white;
+      font-size: 24px;
+      font-family: 'Arial', sans-serif;
+    }
+    .smoke-puff {
+      color: inherit;
+      text-decoration: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="incense-screensaver">
+    <span id="incense-stand" style="position: absolute; bottom: 0; right: 20%">
+      &#9608;&#9608;&#9608;&#9608;&#9608;&#9608;
+    </span>
+    <span id="incense-stick" style="position: absolute; bottom: 1em; right: calc(20% + 0.5em); line-height: 0.75; letter-spacing: -1.75px; text-align: right">
+      \&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>\&nbsp;&nbsp;&nbsp;&nbsp;<br>\&nbsp;&nbsp;&nbsp;<br>\&nbsp;&nbsp;<br>\&nbsp;<br>\<br>
+    </span>
+    <div id="smoke-stack" style="position: absolute; bottom: 6em; right: calc(20% + 2em); width: 200px; display: flex; flex-direction: column-reverse; justify-content: center">
+      <a class="smoke-puff" href="">(&nbsp;&nbsp;&nbsp;&nbsp;)</a>
+      <a class="smoke-puff" href="">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</a>
+      <a class="smoke-puff" href="">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</a>
+    </div>
+  </div>
+</body>
+<script>
+  var maxPuffs = 20;
+  var puffs = []; // array of puff objects
+  /* a puff is an object {element, v_x, v_y} */
+
+  var elements = {smoke_stack: document.querySelector('#smoke-stack'), incense_stick: document.querySelector('#incense-stick'), puffs: document.querySelectorAll('.smoke-puff')};
+  var update = function() {
+    // createPuff();
+    // deleteOldestPuff();
+
+    // update each puff's position and width
+    for (var i = 0; i < puffs.length; i++) {
+      var puff = puffs[i];
+      pu
+      // if (Math.random() > 0.33) {
+
+      // }
+
+    }
+  }
+
+  // var createPuff = function() {
+  //   var newPuffElement = document.createElement('div');
+  //   newPuffElement.className = 'smoke-puff';
+  //   var newPuff = {DOM_element: newPuffElement, v_x: Math.random()};
+
+  // }
+  setInterval(update, 1000);
+</script>
+</html>
